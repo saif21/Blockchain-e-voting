@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1><a href="/get_chain">Blockchain</a></h1>
+  <ul class="list-group">
+    {% for article in articles %}
+      <li class="list-group-item"><a href="get_chain/{{article.index}}">block {{article.index}}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}

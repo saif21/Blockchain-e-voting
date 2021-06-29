@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <form method="POST" action="">
+    <p><input type="submit" class="btn btn-primary" value="Replace_Chain"></p>
+  </form>
+  <h1><a href="/get_chain">Blockchain</a></h1>
+  <ul class="list-group">
+    {% for article in response %}
+      <li class="list-group-item"><a href="replace_chain/{{article.index}}">block {{article.index}}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
