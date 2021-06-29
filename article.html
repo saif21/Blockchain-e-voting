@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1>Block {{article.index}}</h1>
+  <hr>
+  <div>
+    Index: {{article.index | safe}} <br>
+    <hr>
+    Previous_hash: {{article.previous_hash | safe}} <br>
+    <hr>
+    Proof: {{article.proof | safe}} <br>
+    <hr>
+    Timestamp: {{article.timestamp | safe}} <br>
+    <hr>
+    
+    {% for vote in article.votes %}
+    Votes: {{vote}} <br>
+    <hr>
+    {% endfor %}
+  </div>
+{% endblock %}
