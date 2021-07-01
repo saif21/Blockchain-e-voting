@@ -96,9 +96,9 @@ class AddToDatabase():
     def add_email_voter_id(self):
 
         for i in range(1, 122):
-            id=1504000+i
+            id=150+i
             self.voter_id=generate(seed = id)
-            self.email_id=f"u{id}@student.cuet.ac.bd"
+            self.email_id=f"u{id}@bekar.dot.ac.bd"
             self.sql=(
                 "INSERT INTO password(email_id, voter_id) VALUES (%s,%s)")
             cursor.execute(self.sql, (self.email_id, self.voter_id.get_key(),))
